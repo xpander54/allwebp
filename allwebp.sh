@@ -31,7 +31,7 @@ find "$DIRECTORY" -type f -name "*.png" | while read -r png_file; do
     webp_file="$WEBP_DIR/$(basename "${png_file%.png}.webp")"
     
     # Convert PNG to WEBP
-    cwebp -q 80 "$png_file" -o "$webp_file"
+    cwebp -q 60 "$png_file" -o "$webp_file"
     
     # Check if conversion was successful
     if [ $? -eq 0 ]; then
